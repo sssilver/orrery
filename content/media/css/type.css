@@ -73,16 +73,17 @@ time.posttime {
 }
 
 
-#logo a {
-  color: black;
+h1 a {
+  color: black !important;
   text-decoration: none;
 }
 
-#logo a:hover {
-  color: #c00;
+h1 a:hover {
+  color: #c00 !important;
   text-decoration: underline;
 }
 
-.disabled {
-  color: black;
+h1.title {
+  margin-left: 10px;
+  margin-right: 10px
 }

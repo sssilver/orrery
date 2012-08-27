@@ -3,10 +3,10 @@
 <article {{'class='~class if class }}>
 
 
-<h1 class="excerpt">{{ res.meta.title }}</h1>
+<h1 class="excerpt"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h1>
 
 <p>
-    <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}" class="posttime">{{ res.meta.created.strftime('%B %-d, %Y') }}</time>&emsp;{{ post.excerpt|typogrify }} <a class="more" href="{{ content_url(res.url) }}"> more&nbsp;&rarr;</a> <a class="more" href="{{ content_url(res.node.url) }}">all blog entries&nbsp;&rarr;</a>
+    <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}" class="posttime">{{ res.meta.created.strftime('%B %-d, %Y') }}</time>&emsp;{{ post.excerpt|typogrify }} <a class="more" href="{{ content_url(res.url) }}"> more&nbsp;&rarr;</a>{% if node.name != "blog" %} <a class="more" href="{{ content_url(res.node.url) }}">all blog entries&nbsp;&rarr;</a>{% endif %}
 </p>
 <p>
     
