@@ -1,0 +1,48 @@
+---
+extends: base.j2
+default_block: main
+title: Clockwork Universe
+---
+
+{% from "macros.j2" import render_excerpt with context %}
+
+<div class="grid_2">
+
+    <section class="blog_excerpt">
+        {% set latest = site.content.walk_resources_sorted_by_time()|first %}
+
+        {% if latest -%}
+            {{ render_excerpt(latest, 'post') }}
+        {%- endif %}
+
+    </section>
+</div>
+<div class="grid_1">
+    <h1>Exciting</h1>
+    <p>
+        <a href="http://onehellofaride.com/">One Hell of a Ride</a> &mdash; a pretty awesome blog about my motorcycle travels &amp; experiences authored by me.
+    </p>
+    <h2>Technology</h2>
+    <p>
+        <a href="http://python.org/">Python</a>.
+        <a href="http://gentoo.org/">Gentoo</a>,
+        <a href="http://openbox.org/">Openbox</a>.
+        <a href="http://kaufmann.no/roland/dvorak/">Dvorak</a>.
+        <a href="http://beagleboard.org/">Beagleboard</a>,
+        <a href="http://arduino.cc/">Arduino</a>.
+    </p>
+    <h2>Leisure</h2>
+    <p>
+        <a href="http://us.battle.net/wow/en/character/medivh/Bwarf/simple">Bwarf</a> in <a href="http://us.battle.net/wow/en/">World of Warcraft</a>.
+        <a href="http://us.playstation.com/playstation/psn/visit/profiles/Bworf">Bworf</a>.
+    </p>
+    <h2>Music</h2>
+    <p>
+        Guy Gerber.
+    </p>
+</div>
+<div class="grid_1">
+    <h1>Social</h3>
+    <p>Follow me on <a href="https://plus.google.com/u/0/109434194712911527865/posts">Google+</a>. I also rarely post on <a href="http://twitter.com/sssilver">Twitter</a> and <a href="https://diasp.org/people/13c8a8baa0848642">Diaspora</a>. There&rsquo;s also <a href="http://sssilver.tumblr.com/">Tumblr</a>.</p>
+    <p>I lurk in Freenode&rsquo;s <a href="irc://irc.freenode.net/#python">#python</a> and <a href="irc://irc.freenode.net/#gentoo">#gentoo</a> as <em>sssilver</em>.</p>
+</div>

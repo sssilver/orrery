@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+a {
+    color: #c00;
+}
+
+a:visited {
+    color: #900;
+}
